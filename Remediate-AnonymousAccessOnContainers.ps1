@@ -144,7 +144,7 @@ function Remove-AnonymousAccessOnContainers
     $RemediationType = "DisableAllowBlobPublicAccessOnStorage"
     $controls = $controlForRemediation.ResourceList
     $resourceDetails = $controls | Where-Object { $controlIds -eq $_.ControlId};
-    Write-Host "Resource Details are [$($resourceDetails)]"
+    #Write-Host "Resource Details are [$($resourceDetails)]"
     if($RemediationType -eq "DisableAnonymousAccessOnContainers" -and [string]::IsNullOrWhiteSpace($Path))
     {
         Write-Host "`n"
